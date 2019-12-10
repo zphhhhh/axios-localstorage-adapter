@@ -54,6 +54,6 @@ interface axiosLocalStorageAdapterOptions {
     /** set if clear on localstorage's error, detault to true */
     clearOnError?: boolean,
     /** set default adapter, default to axios.defaults.adapter */
-    adapter?: axios.defaults.adapter
+    adapter?: AxiosAdapter
 }
 ```

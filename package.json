@@ -1,6 +1,6 @@
 {
   "name": "axios-localstorage-adapter",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "🚀Caching adapter for axios. Store request results in localStorage to prevent unneeded network requests. Just 1 KB.",
   "main": "index.js",
   "types": "index.d.ts",
