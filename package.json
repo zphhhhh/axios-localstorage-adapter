@@ -1,0 +1,30 @@
+{
+  "name": "axios-localstorage-adapter",
+  "version": "0.2.0",
+  "description": "🚀Caching adapter for axios. Store request results in localStorage to prevent unneeded network requests. Just 1 KB.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zphhhhh/axios-localstorage-adapter.git"
+  },
+  "keywords": [
+    "axios",
+    "adapter",
+    "cache",
+    "localstorage",
+    "persistent"
+  ],
+  "author": "zphhhhh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zphhhhh/axios-localstorage-adapter/issues"
+  },
+  "homepage": "https://github.com/zphhhhh/axios-localstorage-adapter#readme",
+  "devDependencies": {
+    "axios": "^0.19.0"
+  }
+}
