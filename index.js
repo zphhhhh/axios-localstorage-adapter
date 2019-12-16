@@ -77,7 +77,7 @@ async function requestGet(config) {
             let cachedData;
             try {
                 cachedData = JSON.parse(data);
-            } catch {
+            } catch (e) {
                 cachedData = data;
             }
 
@@ -92,7 +92,7 @@ async function requestGet(config) {
                     const V_LAST_MODIFIED_NEW = lastModified;
                     localStorage.setItem(config.K_URL, V_URL_NEW);
                     localStorage.setItem(K_LAST_MODIFIED, V_LAST_MODIFIED_NEW);
-                } catch {
+                } catch (e) {
                     if (options.clearOnError) {
                         clearStorage();
                     }
@@ -165,7 +165,7 @@ function initAdapter() {
     try {
         localStorage.setItem('test', 't');
         localStorage.removeItem('test');
-    } catch {
+    } catch (e) {
         adapter = options.adapter;
         return;
     }
