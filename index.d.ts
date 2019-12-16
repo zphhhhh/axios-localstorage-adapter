@@ -5,10 +5,12 @@ interface AxiosLocalStorageAdapterOptions {
     maxAge?: number,
     /** set exclude condition, default to [] */
     exclude?: string| RegExp | Function | (string|RegExp|Function)[],
-    /** set if clear on localstorage's error, detault to true */
+    /** set if clear on localstorage's error, default to true */
     clearOnError?: boolean,
     /** set default adapter, default to axios.defaults.adapter */
-    adapter?: AxiosAdapter
+    adapter?: AxiosAdapter,
+    /** set false to cache no request in development, default to true */
+    cache?: boolean
 }
 
 export declare function AxiosLocalStorageAdapter(opts: AxiosLocalStorageAdapterOptions): AxiosAdapter

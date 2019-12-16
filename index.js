@@ -13,7 +13,9 @@ const options = {
     /** @type {boolean} if clear on localstorage's error */
     clearOnError: true,
     /** @type {AxiosAdapter} default adapter, default to axios.defaults.adapter */
-    adapter: axios.defaults.adapter
+    adapter: axios.defaults.adapter,
+    /** @type {boolean} default to true to cache request, generally we may use it in development but not production */
+    cache: true
 };
 
 /**
@@ -154,12 +156,17 @@ async function cacheAdapter(config) {
 /**
  * do something with localstorage on init
  */
-function initStorage() {
+function initAdapter() {
+    if (!options.cache) {
+        adapter = options.adapter;
+        return;
+    }
+
     try {
         localStorage.setItem('test', 't');
         localStorage.removeItem('test');
     } catch {
-        adapter = option.adapter;
+        adapter = options.adapter;
         return;
     }
 
@@ -184,7 +191,8 @@ function initStorage() {
  */
 export default function AxiosLocalStorageAdapter(opts) {
     Object.assign(options, opts);
-    initStorage();
+    
+    initAdapter();
 
     return adapter;
 }
