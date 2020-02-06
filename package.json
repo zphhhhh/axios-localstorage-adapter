@@ -26,14 +26,13 @@
   },
   "homepage": "https://github.com/zphhhhh/axios-localstorage-adapter#readme",
   "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-external-helpers": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
     "axios": "^0.19.0",
     "rollup": "^1.31.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-node-resolve": "^5.2.0"
   },
-  "dependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/plugin-external-helpers": "^7.8.3",
-    "@babel/preset-env": "^7.8.4"
-  }
+  "dependencies": {}
 }
