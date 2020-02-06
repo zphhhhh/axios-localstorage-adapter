@@ -163,8 +163,10 @@ function initAdapter() {
     }
 
     try {
-        localStorage.setItem('test', 't');
-        localStorage.removeItem('test');
+        if (typeof localStorage !== 'undefined') {
+            localStorage.setItem('test', 't');
+            localStorage.removeItem('test');
+        }
     } catch (e) {
         adapter = options.adapter;
         return;
